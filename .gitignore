@@ -13,6 +13,7 @@
 *.out
 *.run.xml
 *.synctex.gz
+*.cut
 *.toc
 *.xdv
 *.idx
