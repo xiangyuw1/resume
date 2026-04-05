@@ -1,3 +1,3 @@
 \vspace{-0.35\baselineskip}
-\noindent\hfill\parbox[t]{0.13\textwidth}{\centering\href{https://xiangyuw1.github.io/resume/?version=\docversion&lang=zh}{\tikz[baseline=(btn.base)]\node[draw=black!14,fill=black!2,rounded corners=2pt,inner xsep=4.5pt,inner ysep=1.8pt,drop shadow={opacity=0.18,shadow xshift=0.16ex,shadow yshift=-0.16ex,fill=black!45}] (btn) {\tiny\sffamily\strut check for update};}}\par
+\noindent\hfill\parbox[t]{0.13\textwidth}{\centering\href{https://xiangyuw1.github.io/resume/?version=\docversion&lang=en}{\tikz[baseline=(btn.base)]\node[draw=black!14,fill=black!2,rounded corners=2pt,inner xsep=4.5pt,inner ysep=1.8pt,drop shadow={opacity=0.18,shadow xshift=0.16ex,shadow yshift=-0.16ex,fill=black!45}] (btn) {\tiny\sffamily\strut check for update};}}\par
 \vspace{0.15\baselineskip}
