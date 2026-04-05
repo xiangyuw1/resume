@@ -29,6 +29,7 @@ jobs:
                 grep -vE '(^|/)(build-version\.tex|.*-zh\.tex)$' |
                 sort |
                 while IFS= read -r file; do sha256sum "$file"; done
+              sha256sum photo.jpg
             } | sha256sum | awk '{print $1}' | cut -c1-12
           )
           echo "version=$version" >> "$GITHUB_OUTPUT"
@@ -51,6 +52,7 @@ jobs:
                 grep -E '(^|/).*?-zh\.tex$|(^|/)cv-llt-zh\.tex$' |
                 sort |
                 while IFS= read -r file; do sha256sum "$file"; done
+              sha256sum photo.jpg
             } | sha256sum | awk '{print $1}' | cut -c1-12
           )
           echo "version=$version" >> "$GITHUB_OUTPUT"
@@ -83,6 +85,7 @@ jobs:
                 grep -vE '(^|/)(build-version\.tex|.*-zh\.tex)$' |
                 sort |
                 while IFS= read -r file; do sha256sum "$file"; done
+              sha256sum photo.jpg
             } | sha256sum | awk '{print $1}' | cut -c1-12
           )
           echo "version=$version" >> "$GITHUB_OUTPUT"
@@ -105,6 +108,7 @@ jobs:
                 grep -E '(^|/).*?-zh\.tex$|(^|/)cv-llt-zh\.tex$' |
                 sort |
                 while IFS= read -r file; do sha256sum "$file"; done
+              sha256sum photo.jpg
             } | sha256sum | awk '{print $1}' | cut -c1-12
           )
           echo "version=$version" >> "$GITHUB_OUTPUT"
