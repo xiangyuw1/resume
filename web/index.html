@@ -188,22 +188,22 @@
       <div class="kicker">GitHub Pages build status</div>
       <h1>Resume version check</h1>
       <p class="lede">
-        This page compares the commit embedded in the PDF you opened with the newest published build.
-        If you clicked here from the PDF, the <code>build</code> query parameter identifies that exact document.
+        This page compares the version embedded in the PDF you opened with the newest published build.
+        If you clicked here from the PDF, the <code>version</code> query parameter identifies that exact document.
       </p>
 
       <div class="status-row">
         <div id="statusPill" class="pill">Loading status…</div>
-        <div class="pill" id="buildHint">Build: <span id="buildValue">-</span></div>
+        <div class="pill" id="buildHint">Version: <span id="buildValue">-</span></div>
       </div>
 
       <div class="grid">
         <article class="card">
-          <p class="label">Opened document</p>
+          <p class="label">Opened version</p>
           <p class="value" id="openedCommit">-</p>
         </article>
         <article class="card">
-          <p class="label">Latest published build</p>
+          <p class="label">Latest published version</p>
           <p class="value" id="latestCommit">-</p>
         </article>
         <article class="card">
@@ -225,7 +225,10 @@
 
   <script>
     const params = new URLSearchParams(window.location.search);
-    const openedCommit = params.get('build') || 'not provided';
+    const lang = (params.get('lang') || 'en').toLowerCase() === 'zh' ? 'zh' : 'en';
+    const manifestFile = lang === 'zh' ? 'manifest-zh.json' : 'manifest-en.json';
+    const fallbackPdf = lang === 'zh' ? 'latest-zh.pdf' : 'latest-en.pdf';
+    const openedCommit = params.get('version') || params.get('build') || 'not provided';
     const buildValue = document.getElementById('buildValue');
     const openedCommitEl = document.getElementById('openedCommit');
     const latestCommitEl = document.getElementById('latestCommit');
@@ -239,12 +242,12 @@
 
     async function loadManifest() {
       try {
-        const response = await fetch('manifest.json', { cache: 'no-store' });
+        const response = await fetch(manifestFile, { cache: 'no-store' });
         if (!response.ok) throw new Error('manifest unavailable');
         const manifest = await response.json();
-        const latestCommit = manifest.commit || '-';
+        const latestCommit = manifest.version || manifest.commit || '-';
         const publishedAt = manifest.builtAt || manifest.built_at || '-';
-        const latestPdf = manifest.pdf || 'latest.pdf';
+        const latestPdf = manifest.pdf || fallbackPdf;
 
         latestCommitEl.textContent = latestCommit;
         publishedAtEl.textContent = publishedAt;

@@ -20,10 +20,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Write build version file
+      - name: Compute English build version
+        id: version_en
         run: |
+          version=$(
+            {
+              git ls-files '*.tex' settings.sty own-bib.bib |
+                grep -vE '(^|/)(build-version\.tex|.*-zh\.tex)$' |
+                sort |
+                while IFS= read -r file; do sha256sum "$file"; done
+            } | sha256sum | awk '{print $1}' | cut -c1-12
+          )
+          echo "version=$version" >> "$GITHUB_OUTPUT"
           cat > build-version.tex <<EOF
-          \renewcommand{\doccommit}{${GITHUB_SHA::7}}
+          \renewcommand{\docversion}{$version}
           EOF
 
       - name: Compile PDF
@@ -31,6 +41,29 @@ jobs:
         with:
           root_file: cv-llt.tex
           args: -pdf -interaction=nonstopmode -halt-on-error
+
+      - name: Compute Chinese build version
+        id: version_zh
+        run: |
+          version=$(
+            {
+              git ls-files '*.tex' settings.sty own-bib.bib |
+                grep -E '(^|/).*?-zh\.tex$|(^|/)cv-llt-zh\.tex$' |
+                sort |
+                while IFS= read -r file; do sha256sum "$file"; done
+            } | sha256sum | awk '{print $1}' | cut -c1-12
+          )
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          cat > build-version.tex <<EOF
+          \renewcommand{\docversion}{$version}
+          EOF
+
+      - name: Compile Chinese PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv-llt-zh.tex
+          latexmk_use_xelatex: true
+          args: -interaction=nonstopmode -halt-on-error
 
   release-and-publish:
     if: ${{ startsWith(github.ref, 'refs/tags/') }}
@@ -41,10 +74,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Write build version file
+      - name: Compute English build version
+        id: version_en
         run: |
+          version=$(
+            {
+              git ls-files '*.tex' settings.sty own-bib.bib |
+                grep -vE '(^|/)(build-version\.tex|.*-zh\.tex)$' |
+                sort |
+                while IFS= read -r file; do sha256sum "$file"; done
+            } | sha256sum | awk '{print $1}' | cut -c1-12
+          )
+          echo "version=$version" >> "$GITHUB_OUTPUT"
           cat > build-version.tex <<EOF
-          \renewcommand{\doccommit}{${GITHUB_SHA::7}}
+          \renewcommand{\docversion}{$version}
           EOF
 
       - name: Compile PDF
@@ -52,6 +95,29 @@ jobs:
         with:
           root_file: cv-llt.tex
           args: -pdf -interaction=nonstopmode -halt-on-error
+
+      - name: Compute Chinese build version
+        id: version_zh
+        run: |
+          version=$(
+            {
+              git ls-files '*.tex' settings.sty own-bib.bib |
+                grep -E '(^|/).*?-zh\.tex$|(^|/)cv-llt-zh\.tex$' |
+                sort |
+                while IFS= read -r file; do sha256sum "$file"; done
+            } | sha256sum | awk '{print $1}' | cut -c1-12
+          )
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          cat > build-version.tex <<EOF
+          \renewcommand{\docversion}{$version}
+          EOF
+
+      - name: Compile Chinese PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv-llt-zh.tex
+          latexmk_use_xelatex: true
+          args: -interaction=nonstopmode -halt-on-error
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -61,23 +127,41 @@ jobs:
           generate_release_notes: true
           files: |
             cv-llt.pdf
+            cv-llt-zh.pdf
 
       - name: Prepare GitHub Pages content
         run: |
           mkdir -p site
           touch site/.nojekyll
+          cp cv-llt.pdf site/latest-en.pdf
+          cp cv-llt-zh.pdf site/latest-zh.pdf
           cp cv-llt.pdf site/latest.pdf
           cp web/index.html site/index.html
-          cat > site/manifest.json <<EOF
+          cat > site/manifest-en.json <<EOF
           {
+            "lang": "en",
             "tag": "${GITHUB_REF_NAME}",
-            "commit": "${GITHUB_SHA::7}",
+            "version": "${{ steps.version_en.outputs.version }}",
+            "commit": "${{ steps.version_en.outputs.version }}",
             "builtAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
-            "pdf": "latest.pdf",
+            "pdf": "latest-en.pdf",
             "pdfSha256": "$(sha256sum cv-llt.pdf | awk '{print $1}')",
             "source": "https://github.com/xiangyuw1/resume"
           }
           EOF
+          cat > site/manifest-zh.json <<EOF
+          {
+            "lang": "zh",
+            "tag": "${GITHUB_REF_NAME}",
+            "version": "${{ steps.version_zh.outputs.version }}",
+            "commit": "${{ steps.version_zh.outputs.version }}",
+            "builtAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "pdf": "latest-zh.pdf",
+            "pdfSha256": "$(sha256sum cv-llt-zh.pdf | awk '{print $1}')",
+            "source": "https://github.com/xiangyuw1/resume"
+          }
+          EOF
+          cp site/manifest-en.json site/manifest.json
 
       - name: Publish to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
