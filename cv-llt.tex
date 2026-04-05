@@ -63,6 +63,9 @@
 \includecomment{fullonly}
 % \excludecomment{fullonly}
 
+\providecommand{\doccommit}{local}
+\IfFileExists{build-version.tex}{\input{build-version.tex}}{}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -79,6 +82,7 @@
   \makefield{\faEnvelope[regular]}{\href{mailto:wxiangyu31@gmail.com}{\texttt{wxiangyu31@gmail.com}}}
   \makefield{\faEnvelope[regular]}{\href{mailto:wangxy12023@shanghaitech.edu.cn}{\texttt{wangxy12023@shanghaitech.edu.cn}}}
   \makefield{\faGithub}{\href{https://github.com/xiangyuw1}{\texttt{xiangyuw1}}}
+  \makefield{\faGlobe}{\href{https://xiangyuw1.github.io/resume/?build=\doccommit}{\texttt{check latest}}}
 }
 
 \rightheader{~}

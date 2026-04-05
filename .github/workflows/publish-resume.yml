@@ -1,0 +1,53 @@
+name: Build and publish resume
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Write build version file
+        run: |
+          cat > build-version.tex <<EOF
+          \renewcommand{\doccommit}{${GITHUB_SHA::7}}
+          EOF
+
+      - name: Compile PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv-llt.tex
+          args: -pdf -interaction=nonstopmode -halt-on-error
+
+      - name: Prepare GitHub Pages content
+        run: |
+          mkdir -p site
+          touch site/.nojekyll
+          cp cv-llt.pdf site/latest.pdf
+          cp web/index.html site/index.html
+          cat > site/manifest.json <<EOF
+          {
+            "commit": "${GITHUB_SHA::7}",
+            "builtAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "pdf": "latest.pdf",
+            "pdfSha256": "$(sha256sum cv-llt.pdf | awk '{print $1}')",
+            "source": "https://github.com/xiangyuw1/resume"
+          }
+          EOF
+
+      - name: Publish to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./site
+          force_orphan: true
