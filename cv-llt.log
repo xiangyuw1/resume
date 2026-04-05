@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.16)  5 APR 2026 01:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.16)  5 APR 2026 01:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1078,38 +1078,38 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-LaTeX Info: Redefining \oldstylenums on input line 96.
+LaTeX Info: Redefining \oldstylenums on input line 95.
 LaTeX Font Info:    Trying to load font information for T1+Cochineal-OsF on inp
-ut line 96.
+ut line 95.
 
 (d:/texlive/2026/texmf-dist/tex/latex/cochineal/T1Cochineal-OsF.fd
 File: T1Cochineal-OsF.fd 2016/01/19 (msharpe) Font definitions for T1/Cochineal
 -OsF.
 )
 LaTeX Font Info:    Font shape `T1/Cochineal-OsF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 96.
+(Font)              scaled to size 10.95pt on input line 95.
 
 (./cv-llt.aux)
 \openout1 = `cv-llt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
-LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
  (d:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count474
@@ -1180,9 +1180,9 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'cv-llt.bbl' not found.
 
 No file cv-llt.bbl.
-Package biblatex Info: Reference section=0 on input line 96.
-Package biblatex Info: Reference segment=0 on input line 96.
-Package hyperref Info: Link coloring ON on input line 96.
+Package biblatex Info: Reference section=0 on input line 95.
+Package biblatex Info: Reference segment=0 on input line 95.
+Package hyperref Info: Link coloring ON on input line 95.
 (./cv-llt.out) (./cv-llt.out)
 \@outlinefile=\write6
 \openout6 = `cv-llt.out'.
@@ -1195,67 +1195,73 @@ Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
 LaTeX Font Info:    Font shape `T1/Cochineal-OsF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 97.
+(Font)              scaled to size 17.28pt on input line 96.
 LaTeX Font Info:    Font shape `T1/Cochineal-OsF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 97.
+(Font)              scaled to size 17.28pt on input line 96.
 LaTeX Font Info:    Trying to load font information for T1+Cabin-TLF on input l
-ine 97.
+ine 96.
 
 (d:/texlive/2026/texmf-dist/tex/latex/cabin/T1Cabin-TLF.fd
 File: T1Cabin-TLF.fd 2020/07/15 (autoinst) Font definitions for T1/Cabin-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/b/n' aliased to
-(Font)              `T1/Cabin-TLF/bold/n' on input line 97.
+(Font)              `T1/Cabin-TLF/bold/n' on input line 96.
 LaTeX Font Info:    Font shape `T1/Cabin-TLF/bold/n' will be
-(Font)              scaled to size 17.28pt on input line 97.
+(Font)              scaled to size 17.28pt on input line 96.
 LaTeX Font Info:    Font shape `T1/Cochineal-OsF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 97.
+(Font)              scaled to size 10.0pt on input line 96.
 LaTeX Font Info:    Trying to load font information for TS1+Cochineal-OsF on in
-put line 97.
+put line 96.
 
 (d:/texlive/2026/texmf-dist/tex/latex/cochineal/TS1Cochineal-OsF.fd
 File: TS1Cochineal-OsF.fd 2016/01/19 (msharpe) Font definitions for TS1/Cochine
 al-OsF.
 )
 LaTeX Font Info:    Font shape `TS1/Cochineal-OsF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 97.
+(Font)              scaled to size 10.0pt on input line 96.
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 97.
+nput line 96.
 
 (d:/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
-LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 97
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 96
 .
 
 (d:/texlive/2026/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 97.
+(Font)              scaled to size 8.99994pt on input line 96.
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 97.
+ input line 96.
 
 (d:/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <10> not 
 available
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 97.
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
-[][] [][]\T1/zi4/m/n/10 wxiangyu31@gmail.com[][]  [] [][]wangxy12023@shanghaite
-ch.edu.cn[][]  [] [][]xiangyuw1[][]
- []
-
+n input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 97.
+(Font)              <10.95> on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 97.
+(Font)              <8> on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 97.
-<photo.jpg, id=35, 401.5pt x 401.5pt>
+(Font)              <6> on input line 96.
+<photo.jpg, id=34, 401.5pt x 401.5pt>
 File: photo.jpg Graphic file (type jpg)
 <use photo.jpg>
-Package pdftex.def Info: photo.jpg  used on input line 97.
+Package pdftex.def Info: photo.jpg  used on input line 96.
 (pdftex.def)             Requested size: 61.03345pt x 61.03108pt.
+
+Including 'fullonly' comment.
+\openout4 = `comment.cut'.
+
+ Straight input of comment.cut. (./comment.cut
+LaTeX Font Info:    Font shape `T1/Cochineal-OsF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 2.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/m/n' aliased to
+(Font)              `T1/Cabin-TLF/regular/n' on input line 2.
+LaTeX Font Info:    Font shape `T1/Cabin-TLF/regular/n' will be
+(Font)              scaled to size 6.0pt on input line 2.
+)
 (./education.tex
 (d:/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd))
 (./education.tex) (./education.tex) (./education.tex) (./misc.tex) (./misc.tex)
@@ -1287,25 +1293,26 @@ Package logreq Info: Writing requests to 'cv-llt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39667 strings out of 467525
- 799220 string characters out of 5423209
- 1615637 words of memory out of 5000000
- 67935 multiletter control sequences out of 15000+600000
- 774497 words of font info for 75 fonts, out of 8000000 for 9000
+ 39696 strings out of 467525
+ 799727 string characters out of 5423209
+ 1616580 words of memory out of 5000000
+ 67961 multiletter control sequences out of 15000+600000
+ 799985 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  100i,12n,108p,1199b,1801s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2026/texmf-dist/fonts/type1/impallari/cabin/Cabin-Bold.pfb><d:/te
-xlive/2026/texmf-dist/fonts/type1/public/cochineal/Cochineal-Bold.pfb><d:/texli
-ve/2026/texmf-dist/fonts/type1/public/cochineal/Cochineal-Roman.pfb><d:/texlive
-/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb
-><d:/texlive/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-R
-egular.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAwes
-ome5Free-Solid.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/inconsolata/I
-nconsolata-zi4r.pfb>
-Output written on cv-llt.pdf (2 pages, 189020 bytes).
+xlive/2026/texmf-dist/fonts/type1/impallari/cabin/Cabin-Regular.pfb><d:/texlive
+/2026/texmf-dist/fonts/type1/public/cochineal/Cochineal-Bold.pfb><d:/texlive/20
+26/texmf-dist/fonts/type1/public/cochineal/Cochineal-Roman.pfb><d:/texlive/2026
+/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><d:/
+texlive/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Regula
+r.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5F
+ree-Solid.pfb><d:/texlive/2026/texmf-dist/fonts/type1/public/inconsolata/Incons
+olata-zi4r.pfb>
+Output written on cv-llt.pdf (2 pages, 206908 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  7 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
