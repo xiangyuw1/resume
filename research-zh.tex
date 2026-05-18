@@ -1,22 +1,24 @@
 \begin{rubric}{科研与实验经历}
 \entry*[2024 -- 至今]%
-	\textbf{上海科技大学孙亚东课题组（SLST）}\par
+	\textbf{上海科技大学孙亚东课题组}\par
 	本科生\par
-	在\href{https://slst.shanghaitech.edu.cn/syd/main.htm}{孙亚东课题组}参与蛋白质-RNA复合物结构与功能研究，使用冷冻电镜等结构生物学技术；系统掌握了质粒构建、细胞转染、蛋白表达与纯化等实验技能。
+	在\href{https://slst.shanghaitech.edu.cn/syd/main.htm}{孙亚东}老师课题组进行系统的学习与实践。课题组专注于蛋白质-RNA复合物的结构与功能研究，主要运用冷冻电子显微镜（cryo-EM）等结构生物学技术解析生物大分子的三维结构。在此期间，我系统学习了分子克隆、质粒构建、细胞培养、蛋白质表达与纯化等关键技术，并掌握了亲和层析、分子排阻层析（SEC）等蛋白质纯化方法。通过参与课题组的日常研究工作，我积累了结构生物学实验的实践经验，包括样品制备、数据收集与处理等环节，并对蛋白质-RNA相互作用的机制有了更深入的理解。\par
 %
 \entry*[2025 秋季]%
 	\textbf{FlyCropper -- 果蝇翅型分类系统}\par
 	遗传学实验课独立项目\par
 	作为主要代码贡献者之一，参与构建两阶段深度学习流程（目标检测 + 分类），用于自动识别果蝇并分类长翅/短翅表型。\par
+	FlyCropper是一个基于深度学习的果蝇检测与翅膀分类系统，使用两阶段方案：YOLOv8目标检测 → ResNet/EfficientNet分类，实现长短翅自动识别。支持从Label Studio标注到端到端推理的完整流程。\par
 	\href{https://github.com/xiangyuw1/FlyCropper}{github.com/xiangyuw1/FlyCropper}
 %
 \entry*[2025 春季]%
 	\textbf{mTORC1 抑制剂对癌细胞系抑制作用评估}\par
 	细胞生物学实验课独立项目\par
-	负责该项目生化实验部分的方案设计与执行，研究 mTORC1 抑制剂对多种癌细胞系的抑制效应。
+	负责该项目生化实验部分的方案设计与执行，通过 qPCR 检测 mTORC1 下游靶基因 FASN 和 PDK1 的转录水平变化（以 ACTB 为内参），验证 mTORC1 抑制剂 WRX606 对多种癌细胞系的抑制效应。
 %
 \entry*[2025 秋季]%
 	\textbf{计算机模拟蓝藻昼夜节律调控}\par
 	系统生物学导论课程项目\par
-	构建并分析 KaiA/KaiB/KaiC 核心振荡模型：KaiA 促进 KaiC 磷酸化、KaiB 通过负反馈抑制该过程，使 KaiC 的磷酸化水平在三蛋白协同作用下周期性升降，从而形成约 24 小时的昼夜节律。
+	基于蓝藻昼夜节律振荡器的 KaiABC 蛋白系统，构建了磷酸化动力学的常微分方程（ODE）模型，模拟生物钟的核心工作机制。研究对象为 KaiC 蛋白在丝氨酸（S431）和苏氨酸（T432）两个位点的有序磷酸化/去磷酸化循环，该过程受 KaiA（激活因子）和 KaiB（抑制因子）调控，形成约 24 小时的自主振荡。通过文献分析提取 8 组速率常数及 KaiA-KaiC 结合动力学参数，建立四态（U/T/S/ST-KaiC）转换的 ODE 方程组，使用 Python（NumPy、SciPy、Matplotlib）完成参数计算、数值仿真与结果可视化，成功复现文献中的磷酸化振荡曲线。\par
+	\href{https://github.com/xiangyuw1/kaic-oscillator}{github.com/xiangyuw1/kaic-oscillator}
 \end{rubric}
